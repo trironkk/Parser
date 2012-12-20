@@ -1,0 +1,1 @@
+java -jar ../../../GrammarParser.jar tokenSpec grammarSpec input

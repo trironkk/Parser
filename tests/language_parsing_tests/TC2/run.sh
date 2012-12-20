@@ -1,0 +1,1 @@
+java -jar ../../../LanguageParser.jar languageSpec input

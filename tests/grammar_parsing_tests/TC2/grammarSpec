@@ -1,0 +1,2 @@
+<root> ::= $HELLO <basic-symbols> $BYE <root> | $NEW_LINE <root> | $EPSILON
+<basic-symbols> ::=  $VALID_LICENSE| $PERSONALIZED_LICENSE

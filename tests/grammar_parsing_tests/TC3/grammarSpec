@@ -1,0 +1,2 @@
+<MiniRE-program> ::= $START <basic-symbols> $END
+<basic-symbols> ::=  $SMILEY| $SAD| $ANGRY | $BIG_SMILEY | $BIG_SAD | $BIG_ANGRY

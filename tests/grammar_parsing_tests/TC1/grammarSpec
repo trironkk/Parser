@@ -1,0 +1,15 @@
+<reg-ex> ::= <rexp>
+<rexp> ::= <rexp1> <rexp'>
+<rexp'> ::= $UNION <rexp1> <rexp'> | $EPSILON
+<rexp1> ::= <rexp2> <rexp1'>
+<rexp1'> ::= <rexp2> <rexp1'> | $NEW_LINE <rexp1'> | $EPSILON
+<rexp2> ::= $OPEN_PARENS <rexp> $CLOSE_PARENS <rexp2-tail> | $RE_CHAR <rexp2-tail> | <rexp3>
+<rexp2-tail> ::= $STAR | $PLUS | $EPSILON
+<rexp3> ::= <char-class> | $EPSILON
+<char-class> ::= $DOT | $OPEN_BRACKET <char-class1> | $DEFINED_CLASS
+<char-class1> ::= <char-set-list> | <exclude-set>
+<char-set-list> ::= <char-set> <char-set-list> | $CLOSE_BRACKET | $EPSILON
+<char-set> ::= $CLS_CHAR <char-set-tail>
+<char-set-tail> ::= $DASH $CLS_CHAR | $EPSILON
+<exclude-set> ::= $CARROT <char-set> $CLOSE_BRACKET $IN <exclude-set-tail>
+<exclude-set-tail> ::= $OPEN_BRACKET <char-set> $CLOSE_BRACKET | $DEFINED_CLASS

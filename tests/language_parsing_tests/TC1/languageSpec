@@ -1,0 +1,11 @@
+$LETTER [A-Za-z]
+$NON-A [^a] IN $LETTER
+$DIGIT  [0-9]
+$EVEN (0|2|4|6|8)
+$ODD (1|3|5|7|9)
+
+$COOLSTUFF ($NON-A)+
+$DERP $EVEN($LETTER)*
+$NUMBERS (($EVEN)*|($ODD)*)*
+$A a
+$TWO 2
