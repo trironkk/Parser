@@ -95,25 +95,6 @@ public class TokenGenerator {
 		}
 	}
 	
-	public static List<Token> generateAll(TokenType tokenType, StringBuffer contents)
-	{
-		List<Token> tokenList = new ArrayList<Token>();
-		
-		while(contents.length() > 0)
-		{
-			Token res = TokenGenerator.generate(tokenType, contents);
-			if(res.tokenType == RegExLanguage.EPSILON || res.contents.length() == 0)
-			{
-				//Remove first character
-				contents.deleteCharAt(0);
-			}else{
-				tokenList.add(res);
-			}
-		}
-		
-		return tokenList;
-	}
-	
 	public static int getTokenLength(TokenType token, StringBuffer contents) {
 		// TODO: Reimplement the logic in generate to make this method more
 		// performant.
