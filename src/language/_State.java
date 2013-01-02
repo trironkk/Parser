@@ -223,7 +223,8 @@ public class _State {
 	 * This method allows for the mapping of a set of characters to a
 	 * destination.
 	 */
-	public void addTransitions(Set<Character> characterSet, _State destination) {
+	public void addTransitions(Set<Character> characterSet,
+            _State destination) {
 		for (Character c : characterSet) {
 			if (c == null) {
 				String errorMsg =
